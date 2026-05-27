@@ -6,7 +6,7 @@ let passwordTwo = document.getElementById("password-two")
 let passwordLength = document.getElementById("password-length")
 let passwordCopyOne = document.getElementById("password-one-copied")
 let passwordCopyTwo = document.getElementById("password-two-copied")
-let maxChar = 15;
+let maxChar = passwordLength.value;
 
 // Update maxChar varible with updated input field number
 function passwordInput () {
