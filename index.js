@@ -3,7 +3,12 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let generateEL = document.getElementById("generate-password")
 let passwordOne = document.getElementById("password-one")
 let passwordTwo = document.getElementById("password-two")
-let maxChar = 15;
+let passwordLength = document.getElementById("password-length")
+let maxChar = 0;
+
+function passwordInput () {
+    maxChar = passwordLength.value
+}
 
 // Generate a random number between 0 and the length of the character array
 function getRandomChar() {

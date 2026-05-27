@@ -61,6 +61,19 @@ button {
     padding: 100px 55px;
 }
 
+.container--sub div {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.container--sub p {
+  display: inline-block;
+}
+
+.container--sub input {
+  max-width: 25px;
+} 
+
 .container--passwords {
   display: flex;
   justify-content: space-between;

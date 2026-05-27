@@ -6,10 +6,20 @@
         <div class="container">
             <h1>Generate a <span>random password</span></h1>
             <p class="header--text">Never use an insecure password again.</p>
+            <div class="container--sub">
             <button onclick="generatePassword()" id="generate-password">Generate passwords</button>
+                <div>
+                    <p>Set a password length: </p>
+                    <input id="password-length" type="text" oninput="passwordInput()">
+                </div>
+            </div>
             <div class="container--passwords">
-               <p id="password-one"></p>
-               <p id="password-two"></p> 
+                <div>
+                    <p id="password-one"></p>
+                </div>
+                <div> 
+                    <p id="password-two"></p> 
+                </div>
             </div>
         </div>
         <script src="index.js"></script>
