@@ -4,10 +4,18 @@ let generateEL = document.getElementById("generate-password")
 let passwordOne = document.getElementById("password-one")
 let passwordTwo = document.getElementById("password-two")
 let passwordLength = document.getElementById("password-length")
-let maxChar = 0;
+let passwordCopyOne = document.getElementById("password-one-copied")
+let passwordCopyTwo = document.getElementById("password-two-copied")
+let maxChar = 15;
 
+// Update maxChar varible with updated input field number
 function passwordInput () {
-    maxChar = passwordLength.value
+    if(isNaN(passwordLength.value)) {
+        alert("Please type a number in the input field")
+        passwordLength.value = ""
+    } else {
+        maxChar = passwordLength.value
+    }
 }
 
 // Generate a random number between 0 and the length of the character array
@@ -31,3 +39,15 @@ function renderPassword() {
     }
 }
 
+// Save Passwords to Clipboard
+function savePasswordOne() {
+    navigator.clipboard.writeText(passwordOne.textContent)
+
+    passwordCopyOne.textContent = "Password Copied: " + passwordOne.textContent
+}
+
+function savePasswordTwo() {
+    navigator.clipboard.writeText(passwordTwo.textContent)
+
+    passwordCopyTwo.textContent = "Password Copied: " + passwordTwo.textContent
+}

@@ -45,7 +45,6 @@ button {
     padding: 10px 15px;
     cursor: pointer;
     outline: inherit;
-  
 }
 
 .header--text {
@@ -81,15 +80,34 @@ button {
   margin: 35px auto 0;
 }
 
+.container--passwords div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .container--passwords p {
-  display: inline-block;
   background-color: #273549;
   color: #55F991;
   border-radius: 5px;
   height: 40px;
-  width: 50%;
+  width: 100%;
   max-width: 210px;
   margin-top: 35px;
   padding: 10px 0;
   text-align: center;
+}
+
+.container--passwords button {
+  display: block;
+  width: 100%;
+  max-width: 210px;
+}
+
+.container--passwords span {
+    font-size: 16px;
+    margin: 5px auto;
+    font-weight: 700;
+    font-family: Inter;
+    line-height: 1.5;
 }
